@@ -16,14 +16,16 @@ Results are stored in JSON and can be analyzed later.
 --- 
 
 ## Project Structure
+```text
 .
 ├── ankiCodeMenu.sh                 # Main script menu
 ├── ankiCode1.sh                    # Logs today's Anki reviews
 ├── reviewsSummary.sh               # Generates summaries from JSON logs
 │
-├── dates_Kaishi_1.5k.json          # Log of dates the script has logged reviews
+├── dates_Kaishi_1.5k.json          # Log of dates when reviews were recorded
 ├── reviewResults_Kaishi_1.5k.json  # Per-card review stats (pass/fail/accuracy)
 └── totalAccuracy_Kaishi_1.5k.json  # Cumulative pass/fail totals for the deck
+```
 
 ## Installation
 
@@ -36,9 +38,10 @@ Installation
 Your scripts need **bash** and **jq**:
 
 #### On Ubuntu/Debian:
-
+```bash
 sudo apt-get update
 sudo apt-get install jq
+```
 
 ### 3. Download/clone this repo
 
@@ -48,8 +51,9 @@ Put all scripts in one folder (e.g. anki-tracker).
 
 Run this in the project folder:
 
+```bash
 chmod +x ankiCodeMenu.sh ankiCode1.sh reviewsSummary.sh
-
+```
 ## Configuration
 
 You may need to adjust these variables depending on your deck setup:
@@ -57,29 +61,29 @@ You may need to adjust these variables depending on your deck setup:
 1. Button Mapping
 
 Inside the script:
-
+```bash
 failButton = 1
 passButton = 3
-
+```
 These correspond to Anki’s review buttons. Adjust if your mappings differ.
 
 
 2. Field Names
 
 The script assumes your notes have these fields:
-
+```text
 Word
 Word Reading
 Word Meaning
-
+```
 Change these in the code if your note type uses different field names.
 
 ## Usage
 
 1. Open Anki and ensure you have completed your daily reviews for a given deck
 2. Run ./ankiCodeMenu.sh in the terminal
-3. Choose "1) Log Daily Anki Reviews" to log today's Anki reviews for a given deck.
-4. Choose "2) Summary of Total Reviews" to obtain a log of every review for a given deck.
+4. Choose "1) Log Daily Anki Reviews" to log today's Anki reviews for a given deck.
+5. Choose "2) Summary of Total Reviews" to obtain a log of every review for a given deck.
 
 
 

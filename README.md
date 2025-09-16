@@ -16,15 +16,14 @@ Results are stored in JSON and can be analyzed later.
 --- 
 
 ## Project Structure
-anki-addon/
--├── ankiCodeMenu.sh              # Main script menu
--├── ankiCode1.sh                 # Logs today's Anki reviews
--├── reviewsSummary.sh            # Generates summaries from JSON logs
--│
--├── dates_Kaishi_1.5k.json       # Stores log of dates when reviews were recorded
--├── reviewResults_Kaishi_1.5k.json  # Stores per-card review results (pass/fail/accuracy)
--├── totalAccuracy_Kaishi_1.5k.json  # Stores cumulative pass/fail totals for the deck
-
+.
+├── ankiCodeMenu.sh                 # Main script menu
+├── ankiCode1.sh                    # Logs today's Anki reviews
+├── reviewsSummary.sh               # Generates summaries from JSON logs
+│
+├── dates_Kaishi_1.5k.json          # Log of dates the script has logged reviews
+├── reviewResults_Kaishi_1.5k.json  # Per-card review stats (pass/fail/accuracy)
+└── totalAccuracy_Kaishi_1.5k.json  # Cumulative pass/fail totals for the deck
 
 ## Installation
 
